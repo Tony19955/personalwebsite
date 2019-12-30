@@ -1,3 +1,4 @@
+/*GENERAL SETTINGS*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 * { 
@@ -16,12 +17,20 @@ body {
     text-align: center;
 }
 
+section {
+    padding: 5rem 30rem 5rem 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 button {
     margin: 0;
     padding: 0;
     outline: none;
     border: none;
     background: none;
+    cursor: pointer;
 }
 
 a, a:link, a:hover, a:visited, a:active {
@@ -29,13 +38,20 @@ a, a:link, a:hover, a:visited, a:active {
     background-color: transparent;
 }
 
-.top-section {
+h1, h2, h3, p {
+    padding: 0;
+    margin: 0;
+}
+
+/*TOP SECTION*/
+
+.top {
     height: 100vh;
     display: flex;
     align-items: center;
     background: white;
     color: black;
-    padding: 0% 5% 0% 5%;
+    padding: 0 15rem 0 15rem;
 }
 
 .container {
@@ -58,12 +74,11 @@ a, a:link, a:hover, a:visited, a:active {
     -webkit-text-fill-color: transparent;
 }
 
-.know-more-btn {
-    width: 15%;
+.hover-btn {
+    width: 20rem;
     justify-self: left;
     position: relative;
     font-size: 2.5rem;
-    font-weight: 700;
     font-weight: 700;
     padding: 0.8rem 1.6rem;
     border: 0.3rem solid transparent;
@@ -76,7 +91,7 @@ a, a:link, a:hover, a:visited, a:active {
     z-index: 1;
 }
 
-.know-more-btn::after {
+.hover-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -89,10 +104,265 @@ a, a:link, a:hover, a:visited, a:active {
     background-image: linear-gradient(135deg,#5ab6e0 0%, #add6e2 100%);
 }
 
-.know-more-btn:hover {
+.hover-btn:hover {
     -webkit-text-fill-color: white;
 }
 
-.know-more-btn:hover::after {
+.hover-btn:hover::after {
     width: 100%;
+}
+
+/*ABOUT SECTION*/
+
+.about {
+    height: 100%;
+    background-color: #5ab6e0;
+    background-image: linear-gradient(135deg,#5ab6e0,#add6e2);
+    color: #fff;  
+    -webkit-clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+    clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+    padding-bottom: 10%;
+}
+
+.about .container {
+    align-items: center;
+}
+
+.container h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.content-down {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-down img {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.5);
+    border-radius: 1rem;
+}
+
+.content-right {
+    width: 50%;
+    margin-left: 5rem;
+    text-align: left;
+}
+
+.content-right p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+.content-right a {
+    color: white;
+}
+
+.content-right .hover-btn {
+    margin-top: 2rem;
+    width: 20rem;
+    font-size: 2rem;
+    padding: 0.4rem 0.8rem;
+    border: 0.25rem solid white;
+    -webkit-text-fill-color: white;
+    background-image: linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
+   
+}
+
+.content-right .hover-btn:hover {
+    -webkit-text-fill-color: #5ab6e0;
+}
+
+.content-right .hover-btn::after {
+    background: white;
+}
+
+/*PROJECTS SECTION*/
+
+.projects {
+    height: 100%;
+    padding-bottom: 10%;
+}
+
+.projects .container {
+    align-items: center;
+}
+
+.container h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.project-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin-bottom: 8rem;
+}
+
+.project-description {
+    width: calc(100%/3);
+}
+
+.project-description h3 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+.project-description p {
+    font-size: 1.6rem;
+    text-align: left;
+    line-height: 2.5rem;
+}
+
+.project-btns-container {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.project-btns-container .hover-btn {
+    width: 12rem;
+    font-size: 1.8rem;
+    border-width: 0.2rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.source-code-btn {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #5ab6e0;
+    padding: 0.4rem 0.8rem;
+    margin-left: 1rem;
+    transition: .3s ease;
+}
+
+.source-code-btn:hover {
+    margin-left: 2rem;
+}
+
+
+.project-photo {
+    width: calc((100%/3)*2);
+}
+
+.responsive {
+    height: auto;
+    max-width: 700px;
+    width: 100%;
+}
+
+/*CONTACT SECTION*/
+
+.contact {
+    height: 100%;
+    background-color: #5ab6e0;
+    background-image: linear-gradient(135deg,#5ab6e0,#add6e2);
+    color: #fff;  
+    -webkit-clip-path: polygon(0 15vh,100% 0,100% 100%,0 100%);
+    clip-path: polygon(0 15vh,100% 0,100% 100%,0 100%);
+    padding: 15rem 0 10rem;
+}
+
+.contact .container {
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 5rem;
+    backface-visibility: hidden;
+    width: 100%;
+    border: 1px solid transparent ;
+    border-radius: 2rem;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    color: white;
+}
+
+.flip-card-back {    
+    transform: rotateY(180deg);
+    white-space: nowrap;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.8);
+    color: #5ab6e0;
+}
+
+.flip-card-front h2, 
+.flip-card-back h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.flip-card-back p {
+    font-size: 1.6rem;
+    margin-top: .8rem;
+}
+
+
+@-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgb(0, 151, 211), 0 0 10px rgb(0, 151, 211);
+  }
+  
+  to {
+    box-shadow: 0 0 10px rgb(0, 151, 211), 0 0 15px rgb(0, 115, 160);
+  }
+}
+
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    font-size: 1.3rem;
+    color: white;
+    padding: 5rem;
+}
+
+footer .container {
+    justify-content: center;
+    align-items: center;
+}
+
+footer hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    width: 50%;
+    border-top: 2px solid hsla(0,0%,100%,.1);
 }
