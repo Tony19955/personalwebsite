@@ -10,7 +10,7 @@
     </head>
     <body>
      
-        <div class="top">
+        <div class="top" id="top">
             <div class="container">
                 <h1>Hi, my name is <span class="title-color">Matej Mik</span>
                 <br>
@@ -25,49 +25,54 @@
         <section class="about" id="about">
             <div class="container">
                 <h2>About me</h2>
-                <div class="content-down">                    
-                    <img src="../images/profile.png" height="auto" width="60%" alt="Profile picture">
-                    <div class="content-right">
-                        <p>Started as 12 years old with 2D graphics and was
-                        contributing to <strong><a href="http://www.chmatakov.cz/">chmatakov.cz</a></strong> as a
-                        member of lead graphic team. Later got initiated to 3D 
-                        to achieve rich experience with multidimensional modeling.
-                        </p>
-                        <p>Then, one day, came opportunity to make a small
-                        single page personal website and that is when my web development
-                        career began. I dove into studying every available
-                        topic about this field and giving my knowledge to projects.
-                        </p>
-                        &nbsp;
-                        <p>- Nowdays, I work as passionate freelance Full-stack web
-                        developer with many projects in portfolio and developing my
-                        own e-commerce solution. 
-                        </p>
-                        &nbsp;
-                        <p><strong><em>"I learnt to love DRY rule as well as KISS (Keep it stupid simple),
-                        that's why you can find my code very clean, debugged and easy 
-                        maintainable"</em></strong>
-                        </p>
-                        <button class="hover-btn">View Resume</button>
-                    </div>                  
+                <div class="content-down">                   
+                    <div class="content-first">
+                        <img src="../images/profile.png" alt="Profile picture">
+                        <div>
+                            <p>Started as 12 years old with 2D graphics and was
+                            contributing to <strong><a href="http://www.chmatakov.cz/">chmatakov.cz</a></strong> as a
+                            member of lead graphic team. Later got initiated to 3D 
+                            and achieve rich experience with multidimensional modeling.
+                            </p>
+                            &nbsp;
+                            <p><strong>One day</strong>, came opportunity to make a first
+                            single page website and that's when my web development
+                            journey began. I dove into studying, tested the results of
+                            every new piece of knowledge, analyzed the performance and
+                            applied in real projects.
+                            </p>
+                        </div>
+                    </div> 
+                    <div class="content-second">
+                    <p>- Nowdays, I work as passionate self-employed freelance 
+                    full-stack web developer using the latest code practices
+                    and developing my own e-commerce solution. 
+                    </p>
+                    &nbsp;
+                    <p><strong><em>"I learnt to love DRY rule, but far more KISS (Keep it stupid simple),
+                    that's why you can find my code clean, debugged and easy 
+                    maintainable"</em></strong>
+                    </p>  
+                    </div>                          
+                    <a href="#projects"><button class="hover-btn">View Projects</button></a>             
                 </div>
             </div>
         </section>
       
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="container">
                 <h2>Projects</h2>
                 <div class="project-container">
                     <div class="project-description">
-                        <h3>Project title</h3>
+                        <h3>Robofriends</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                         Fugit assumenda quod hic placeat, perspiciatis voluptate fuga
                         facilis aperiam nulla nostrum voluptatum sequi, repudiandae,
                         obcaecati incidunt quidem optio aliquam ipsa non!
                         </p>
                         <div class="project-btns-container">
-                            <button class="hover-btn">See live</button>
-                            <button class="source-code-btn">Source code</button>
+                            <button class="hover-btn">See Live</button>
+                            <button class="source-code-btn">Source Code</button>
                         </div>
                     </div>
                     <div class="project-photo">
@@ -80,21 +85,42 @@
                 </div>
                 <div class="project-container">
                     <div class="project-description">
-                        <h3>Project title</h3>
+                        <h3>Papa May</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                         Fugit assumenda quod hic placeat, perspiciatis voluptate fuga
                         facilis aperiam nulla nostrum voluptatum sequi, repudiandae,
                         obcaecati incidunt quidem optio aliquam ipsa non!
                         </p>
                         <div class="project-btns-container">
-                            <button class="hover-btn">See live</button>
-                            <button class="source-code-btn">Source code</button>
+                            <button class="hover-btn">See Live</button>
+                            <button class="source-code-btn">Source Code</button>
                         </div>
                     </div>
                     <div class="project-photo">
                         <a href="">
                             <div class="photo-container" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-max="10">
-                                <img src="../images/banner.png" class="responsive" alt="Robofriends">
+                                <img src="../images/banner2.png" class="responsive" alt="Robofriends">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-container">
+                    <div class="project-description">
+                        <h3>TimberWood</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Fugit assumenda quod hic placeat, perspiciatis voluptate fuga
+                        facilis aperiam nulla nostrum voluptatum sequi, repudiandae,
+                        obcaecati incidunt quidem optio aliquam ipsa non!
+                        </p>
+                        <div class="project-btns-container">
+                            <a href="http://www.timberwood.sk/"><button class="hover-btn">See Live</button></a>
+                            <a href=""><button class="source-code-btn">Source Code</button></a>
+                        </div>
+                    </div>
+                    <div class="project-photo">
+                        <a href="">
+                            <div class="photo-container" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-max="10">
+                                <img src="../images/banner3.png" class="responsive" alt="Robofriends">
                             </div>
                         </a>
                     </div>
@@ -105,16 +131,14 @@
             <div class="container">
                 <h2>Contact</h2>
                 <div class="contact-content">                    
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h2>Hover on me</h2>
-                            </div>
-                            <div class="flip-card-back">
-                                <h2>Matej Mik</h2>
-                                <p>Full-stack Web developer</p>
-                                <p>mattias.mik@gmail.com</p>
-                            </div>
+                    <div class="box">
+                        <span></span>
+                        <span></span>                       
+                        <h2>Tap here</h2>                           
+                        <div class="slide-content">
+                            <h3>Matej Mik</h3>
+                            <strong><p>Full-stack Web developer</p></strong>
+                            <p>mattias.mik@gmail.com</p>                       
                         </div>
                     </div>
                 </div>
@@ -123,9 +147,10 @@
         
         <footer>
             <div class="container">
+                <a class="back-to-top" href="#top"><img src="../images/arrow_up.svg" alt="Back to top"></a>
                 <div class="social-links">
-                    <a href="https://github.com/Tony19955"><img src="../images/github_color.svg" alt="GitHub"></a>
-                    <a href="https://www.linkedin.com/in/matej-mik-66a533197/"><img src="../images/linkedin_color.svg" alt="LinkedIn"></a>
+                    <a href="https://github.com/Tony19955"><img src="../images/github.svg" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/matej-mik-66a533197/"><img src="../images/linkedin.svg" alt="LinkedIn"></a>
                 </div>
                 <hr>
                 <p><span>Matej Mik</span> © 2019</p>
