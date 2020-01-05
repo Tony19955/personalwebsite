@@ -10,58 +10,46 @@
     </head>
     <body>
      
-        <div class="top" id="top">
-            <div class="container">
-                <h1>Hi, my name is <span class="title-color">Matej Mik</span>
-                <br>
-                I'm the Full-stack Web developer.
-                </h1>
-                <a class="hover-btn" href="#about">Know more</a>
-            </div>
+        <section class="home" id="home">                   
+            <h1>Hi, my name is <span class="title-color">Matej Mik</span>
+            <br>I'm the Full-stack Web developer.</h1>
+            <a class="hover-btn" href="#about">Know more</a>            
             <div class="stars"></div>
-            <div class="twinkling"></div>
-        </div>
+            <div class="twinkling"></div>        
+        </section>
     
         <section class="about" id="about">
-            <div class="container">
-                <h2>About me</h2>
-                <div class="content-down">                   
-                    <div class="content-first">
-                        <img src="../images/profile.png" alt="Profile picture">
-                        <div>
-                            <p>Started as 12 years old with 2D graphics and was
-                            contributing to <strong><a href="http://www.chmatakov.cz/">chmatakov.cz</a></strong> as a
-                            member of lead graphic team. Later got initiated to 3D 
-                            and achieve rich experience with multidimensional modeling.
-                            </p>
-                            &nbsp;
-                            <p><strong>One day</strong>, came opportunity to make a first
-                            website and that's when my web development
-                            journey began. I dove into studying, tested the results of
-                            every new piece of knowledge, analyzed the performance and
-                            applied in real projects.
-                            </p>
-                        </div>
-                    </div> 
-                    <div class="content-second">
-                    <p>Nowdays, I work as passionate freelance 
-                    full-stack web developer using the latest code practices
-                    and developing my own e-commerce solution. 
-                    </p>
-                    &nbsp;
-                    <p><strong><em>"I learnt to love DRY rule, but even more KISS (Keep it stupid simple),
-                    that's why you can find my code clean, debugged and easy 
-                    maintainable"</em></strong>
-                    </p>  
-                    </div>                          
-                    <a href="#resume"></a><button class="hover-btn-resume">View Resume</button></a>             
-                </div>
-            </div>
+            <h2>About me</h2>  
+            <img src="../images/profile.png" alt="Profile picture">
+            <div class="about-text">    
+                <p>Started as 12 years old with 2D graphics and was
+                contributing to <strong><a href="http://www.chmatakov.cz/">chmatakov.cz</a></strong> as a
+                member of lead graphic team. Later got initiated to 3D 
+                and achieve rich experience with multidimensional modeling.
+                </p>
+                &nbsp;
+                <p><strong>One day</strong>, came opportunity to make a first
+                website and that's when my web development
+                journey began. I dove into studying, tested the results of
+                every new piece of knowledge, analyzed the performance and
+                applied in real projects.
+                </p>
+                <p>Nowdays, I work as passionate freelance 
+                full-stack web developer using the latest code practices
+                and developing my own e-commerce solution. 
+                </p>
+                &nbsp;
+                <p><strong><em>"I learnt to love DRY rule, but even more KISS (Keep it stupid simple),
+                that's why you can find my code clean, debugged and easy 
+                maintainable"</em></strong>
+                </p> 
+            </div>                                    
+            <a href="#resume"></a><button class="hover-btn-resume">View Resume</button></a>        
         </section>
       
         <section class="projects" id="projects">
-            <div class="container">
-                <h2>Projects</h2>
+            <h2>Projects</h2>
+            <div class="projects-container">
                 <div class="project-container">
                     <div class="project-description">
                         <h3>Robofriends</h3>
@@ -71,7 +59,7 @@
                         obcaecati incidunt quidem optio aliquam ipsa non!
                         </p>
                         <div class="project-btns-container">
-                            <a href=""><button class="hover-btn-resume">See Live</button></a>
+                            <a class="hover-btn" href="">See Live</a>
                             <a class="source-code-btn">Source Code</a>
                         </div>
                     </div>
@@ -90,7 +78,7 @@
                         obcaecati incidunt quidem optio aliquam ipsa non!
                         </p>
                         <div class="project-btns-container">
-                            <a href=""><button class="hover-btn-resume">See Live</button></a>
+                            <a class="hover-btn" href="">See Live</a>
                             <a class="source-code-btn">Source Code</a>
                         </div>
                     </div>
@@ -109,7 +97,7 @@
                         obcaecati incidunt quidem optio aliquam ipsa non!
                         </p>
                         <div class="project-btns-container">
-                            <a href="http://www.timberwood.sk/"><button class="hover-btn-resume">See Live</button></a>
+                            <a class="hover-btn" href="http://www.timberwood.sk/">See Live</a>
                             <a href="" class="source-code-btn">Source Code</a>
                         </div>
                     </div>
@@ -118,9 +106,10 @@
                             <img src="../images/banner3.png" class="responsive" alt="Robofriends">                           
                         </a>
                     </div>
-                </div>
-            </div>
+                </div>  
+            </div>        
         </section>
+
         <section class="contact">
             <div class="container">
                 <h2>Contact</h2>
@@ -141,7 +130,7 @@
         
         <footer>
             <div class="container">
-                <a class="back-to-top" href="#top"><img src="../images/arrow_up.svg" alt="Back to top"></a>
+                <a class="back-to-top" href="#home"><img src="../images/arrow_up.svg" alt="Back to top"></a>
                 <div class="social-links">
                     <a href="https://github.com/Tony19955"><img src="../images/github.svg" alt="GitHub"></a>
                     <a href="https://www.linkedin.com/in/matej-mik-66a533197/"><img src="../images/linkedin.svg" alt="LinkedIn"></a>

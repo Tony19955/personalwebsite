@@ -1,7 +1,7 @@
 /*GENERAL SETTINGS*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
-* {     
+*, :after, :before, ::after, ::before {     
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,23 +12,8 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
-
-section {    
-    display: flex;    
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
-
+a,
 button {
-    margin: 0;
-    padding: 0;
     border: none;
     outline: none;   
     cursor: pointer;
@@ -42,7 +27,8 @@ a, a:link, a:hover, a:visited, a:active {
 
 h1, h2, h3, p {
     margin: 0;
-    padding: 0;    
+    padding: 0;  
+    z-index: 99;  
 }
 
 p {
@@ -56,30 +42,43 @@ h2 {
     text-transform: uppercase;
 }
 
-/*TOP SECTION*/
-
-.top {
-    height: 100vh;
-    display: flex;  
-    color: white;
-    align-items: center;
-    padding: 0 3rem;
+body {
+    display: grid;
+    grid-template: 
+    "home" 100vh
+    "about"
+    "about"
+    "projects" 
+    "contact" 
+    "footer" 
+    /1fr;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    width: 100%;
+section {    
+    padding: 2rem;
+}
+
+/*TOP SECTION*/
+
+.home {
+    color: white;
+    grid-area: home;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
+    justify-content: center;
 }
 
-.container h1 {    
-    font-weight: 700;    
-    text-align: left;
+.home h1 {
+    margin: 0 0 10rem;
     font-size: 2.8rem;
     line-height: 1.5;
-    margin-bottom: 10rem;
+    text-align: left;
+}
+
+.home .hover-btn {
+    justify-self: center;   
 }
 
 .title-color {    
@@ -90,17 +89,22 @@ h2 {
 }
 
 .hover-btn {
-    width: 16rem;
-    font-size: 1.7rem;
-    font-weight: 700;      
-    padding: .8rem 1.6rem;    
-    border: 0.25rem solid transparent; 
+    display: inline-block;
+    position: relative;
+    padding: .8rem 1.6rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1;
+    z-index: 2;
+    transition: all .6s cubic-bezier(.19,1,.22,1);
     border-image: linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
-    border-image-slice: 1;
-    background: -webkit-linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
+    background: linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
+    border-image-slice: 1;
 }
 
 @keyframes move-twink-back {    
@@ -151,13 +155,21 @@ h2 {
 /*ABOUT SECTION*/
 
 .about {
+    grid-area: about;
+    display: grid;
+    grid-template: 
+    "h2 h2 h2 h2"
+    "img img img img"
+    "p p p p"
+    ". btn btn ."
+    /1fr 1fr 1fr 1fr;
+    justify-items: center;
     background-color: #5ab6e0;
     background-image: linear-gradient(135deg,#5ab6e0,#add6e2);
     color: #fff;  
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     position: relative;
-    height: 100%;
 }
 
 .about:after {
@@ -173,18 +185,13 @@ h2 {
     display: block;
 }
 
-.about .container h2 {
+.about h2 {
+    grid-area: h2;
     margin: 1rem 0 3rem;
 }
 
-.content-down {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.content-down img {
+.about img {
+    grid-area: img;
     height: auto;
     width: 100%;
     max-width: 300px;
@@ -192,43 +199,46 @@ h2 {
     box-shadow: 0 1rem 3rem rgba(0,0,0,0.5);
 }
 
-.content-first {
-    text-align: center;
+.about-text {
+    grid-area: p;
+    margin: 4rem 0 ;
 }
 
-.content-second {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 4rem;
-}
-
-.content-first div {
-    margin-top: 3rem;
-    text-align: left;
-}
-
-.content-first a {
+.about-text a {
     color: white;
 }
 
 .hover-btn-resume {
+    grid-area: btn;
+    height: 4rem;
+    width: 14rem;
     color: white; 
+    position: relative;
     font-size: 1.6rem;
     font-weight: 700;
     margin: 0 0 10rem;
-    padding: 0.8rem 1.6rem;
     border: 0.2rem solid white; 
 }
 
 /*PROJECTS SECTION*/
-
-.projects .container {
-    align-items: center;
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template: 
+    "h2 h2 h2"
+    "pc pc pc"
+    /1fr 1fr 1fr;
 }
 
-.container h2 {
+.projects h2 {
+    grid-area: h2;
     margin: 0 0 4.5rem;
     text-transform: uppercase;
+    justify-self: center;
+}
+
+.projects-container {
+    grid-area: pc;
 }
 
 .project-container {
@@ -260,20 +270,12 @@ h2 {
 }
 
 .project-btns-container .hover-btn {
-    font-size: 1.6rem;
-}
-
-.project-btns-container .hover-btn-resume {
-    font-size: 1.6rem;
-    color: #5ab6e0;
-    border: 0.15rem solid #5ab6e0;
-    margin: 0;
-    padding: 0.8rem 1.6rem;
-    overflow: hidden;
+    font-size: 1.5rem;
+    padding: .6rem 1.2rem;
 }
 
 .source-code-btn {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #5ab6e0;
     padding: 0.8rem 1.6rem;
@@ -293,6 +295,7 @@ h2 {
 /*CONTACT SECTION*/
 
 .contact {
+    grid-area: contact;
     background-color: #5ab6e0;
     background-image: linear-gradient(135deg,#5ab6e0,#add6e2);
     color: #fff;  
@@ -421,6 +424,7 @@ h2 {
 /*FOOTER*/
 
 footer {
+    grid-area: footer;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -467,112 +471,81 @@ footer .container p span {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+
     section {
         padding: 4rem;
-    }
-
-    .content-first {
-        text-align: center;
     }
   }
   
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {    
-    .content-down {
-        align-items: flex-start;
+@media only screen and (min-width: 768px) {   
+
+    .about {
+        grid-template: 
+        "h2 h2 h2"
+        "img . p"
+        ". . btn"
+        /1fr 2rem 1fr;
+    }
+
+    .about-text {
+        margin-top: 0;
     }
 
     .hover-btn-resume {
-        margin: 0 0 2rem 2rem;
+        margin: 0 0 5rem 0;
     }
 
-    .content-first {
-        margin: 0;
-        display: flex;
-        text-align: left;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    .content-first div {
-        margin: 0 0 0 2rem;
-    }
-    
-    .content-second {
-        margin: 2.5rem 0 2.5rem;
+    .projects {
+        grid-template: 
+        ". h2 ."
+        ". pc ."
+        /1fr 8fr 1fr;
     }
 }
   
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
+    html {
+        font-size: 60%;
+    }
+
     /*TOP SECTION*/
 
-    .top {
-        padding: 0 5.6rem;
-    }
-
-    .top .container {
-        align-items: flex-start;
-    }
-
-    .container h1 {   
-        font-size: 4rem; 
-        text-align: left;  
-        margin-bottom: 5rem;    
-    }
-
-    .hover-btn {
-        position: relative;
-        font-size: 2rem;  
-        padding: 0.8rem 1.6rem;    
-        overflow: hidden;
-    }
-
-    .hover-btn::after { 
-        top: 0;    
-        left: 0;
-        width: 0;
-        content:""; 
-        z-index: -1;  
-        height: 100%;
+    .hover-btn:after {
+        content: "";
         display: block;
         position: absolute;
-        transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
-        background: linear-gradient(135deg,#5ab6e0 0%, #add6e2 100%);  
+        width: 0;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: all .3s cubic-bezier(.19,1,.22,1);
+        background-image: linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
     }
-
+    
     .hover-btn:hover {
         -webkit-text-fill-color: white;
     }
 
-    .hover-btn:hover::after {
+    .hover-btn:hover:after {
         width: 100%;
     }
 
     /*ABOUT SECTION*/
 
-    .about .container {
-        width: 60%;
-    }
-
-    .content-down {
-        align-items: center;
-    }
-
-    .content-first div {
-        margin: 0 0 0 5rem;
-    }
-
-    .content-second {
-        margin: 3rem 0 2.5rem 0;
-        text-align: center;
-    }
+    .about {
+        grid-template: 
+        ". h2 h2 h2 ."
+        ". img . p ."
+        ". . . btn ."
+        /1fr 2fr 3rem 2fr 1fr;
+        }
 
     .hover-btn-resume {
-        margin: 1rem 0 4rem 0;
-        overflow: hidden;
-        position: relative;
+        padding: 0;
         transition: .3s;
     }
 
@@ -580,10 +553,10 @@ footer .container p span {
         color: #5ab6e0;
     }
 
-    .hover-btn-resume::before {
+    .hover-btn-resume:before {
         top: 0;
-        left: -100%;
-        width: 100%;
+        left: 0;
+        width: 0;
         z-index: -1;
         content: '';   
         height: 100%;
@@ -593,24 +566,20 @@ footer .container p span {
         transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
     }
 
-    .hover-btn-resume:hover::before {
-        left: 0;
+    .hover-btn-resume:hover:before {
+        width: 13.85rem;
     }
 
     /*PROJECTS SECTION*/
 
-    .projects .container {
-        align-items: center;
-    }
-
-    .projects .container h2 {
-        text-transform: uppercase;
-        margin-bottom: 5rem;
+    .projects {
+        grid-template: 
+        ". h2 ."
+        ". pc ."
+        /2fr 8fr 2fr;
     }
 
     .project-container {
-        width: 70%;
-        display: flex;
         flex-direction: row;
         justify-content: left;
         align-items: flex-start;
@@ -618,20 +587,12 @@ footer .container p span {
     }
 
     .project-description {
+        width: 63%;
         display: flex;
         flex-direction: column;
     }
 
-    .project-btns-container .hover-btn-resume:hover {
-        color: white; 
-    }
-
-    .project-btns-container .hover-btn-resume::before {
-        background: #5ab6e0;
-    }
-
     .source-code-btn {
-        font-size: 1.4rem;
         transition: .3s ease;
         padding: 0.8rem 1.6rem
     }
@@ -641,6 +602,6 @@ footer .container p span {
     }
 
     .project-photo {
-        margin: 0 0 0 3rem;
+        margin: 0 0 0 5rem;
     }    
 }  
