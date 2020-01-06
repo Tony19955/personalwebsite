@@ -12,7 +12,6 @@ html {
     scroll-behavior: smooth;
 }
 
-a,
 button {
     border: none;
     outline: none;   
@@ -22,7 +21,6 @@ button {
 
 a, a:link, a:hover, a:visited, a:active {
     text-decoration: none;
-    background-color: transparent;
 }
 
 h1, h2, h3, p {
@@ -82,7 +80,7 @@ section {
 }
 
 .title-color {    
-    background: -webkit-linear-gradient(135deg, #add6e2 0%, #5ab6e0  100%);
+    background: -webkit-linear-gradient(135deg, #1480b3 0%, #54d7ee  100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -97,13 +95,13 @@ section {
     line-height: 1;
     z-index: 2;
     transition: all .6s cubic-bezier(.19,1,.22,1);
-    border-image: linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
-    background: linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
+    border-image: linear-gradient(135deg, #1480b3 0%, #54d7ee  100%);
+    background: linear-gradient(135deg, #1480b3 0%, #54d7ee 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 2px solid transparent;
-    border-image: linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
+    border-image: linear-gradient(135deg, #1480b3 0%, #54d7ee  100%);
     border-image-slice: 1;
 }
 
@@ -165,7 +163,7 @@ section {
     /1fr 1fr 1fr 1fr;
     justify-items: center;
     background-color: #5ab6e0;
-    background-image: linear-gradient(135deg,#5ab6e0,#add6e2);
+    background-image: linear-gradient(135deg,#5ab6e0,rgba(40, 121, 146, 0.877), #add6e2);
     color: #fff;  
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -296,12 +294,15 @@ section {
 
 .contact {
     grid-area: contact;
-    background-color: #5ab6e0;
-    background-image: linear-gradient(135deg,#5ab6e0,#add6e2);
+    background-image: url("../images/code.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;  
     -webkit-clip-path: polygon(0 20%,100% 0,100% 100%,0 100%);
     clip-path: polygon(0 20%,100% 0,100% 100%,0 100%);
     position: relative;
+    padding: 0;
     
 }
 
@@ -318,45 +319,36 @@ section {
     display: block;
 }
 
-.contact .container {
+.contact-container {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: linear-gradient(135deg,#5ab5e0dc, rgba(40, 121, 146, 0.877), #add6e291);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem;
 }
 
-.contact .container h2 {
-    margin-top: 5rem;
+.contact h2 {
+    margin: 5rem 0rem;
 }
 
 .box {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;    
     height: 20rem;
-    width: 20rem;
+    width: 25rem;
+    margin: 0 0 3rem;
     color: white;
     overflow: hidden;
     position: relative;
-    background: black;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.5);
-    transition: .3s;
-}
-
-.slide-content {
-    height: 20rem;
-    width: 20rem;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    right: -100%;
-    position: absolute;
-    transition: .5s;
-}
-
-.container .box h2 {
-    margin: 0;
-    font-size: 1.6rem;
+    background: rgba(19, 132, 160, 0.603);
+    border: .2rem solid rgb(102, 199, 255);
+    box-shadow: 0 1rem 2rem rgba(59, 232, 255, 0.5);
     transition: .3s;
 }
 
@@ -368,38 +360,13 @@ section {
     font-size: 1.4rem;
 }
 
-.box:hover h2 {
-    opacity: 0;
-}
-
-.box:hover .slide-content {
-    right: 0;
-}
-
-.box span{
+.box:before {
+    content: "";
     position: absolute;
-    top: 0;
     width: 100%;
     height: 100%;
-  }
-
-.box span:nth-child(1) {
-    left: -50%;
-    transform:rotate(0deg);  
-}
-  
-.box span:nth-child(2) {
-    transform:rotate(180deg);
-    left: 50%;
-}
-
-.box span:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-image: linear-gradient(135deg,#add6e200 0%, #ffffff 100%); 
-  animation: animate 2s linear infinite;  
+    background-image: linear-gradient(90deg, rgba(102, 212, 255, 0.02), rgba(70, 212, 255, 0.404)); 
+    animation: animate 5s linear infinite;  
 }
 
 @keyframes animate {
@@ -407,14 +374,18 @@ section {
         transform:scaleX(0);
         transform-origin: left;
     }
-    50% {
+    15% {
         transform:scaleX(1);
         transform-origin: left;
     }
-    50.1% {
+    15.1% {
         transform:scaleX(1);
         transform-origin: right;      
     }    
+    30% {
+        transform:scaleX(0);
+        transform-origin: right;      
+    }  
     100% {
         transform:scaleX(0);
         transform-origin: right;      
@@ -434,15 +405,25 @@ footer {
     font-size: 1.5rem;
     color: white;
     padding: 5rem 0 5rem 0;
-}
-
-footer .container {
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
 .back-to-top {
-    margin-bottom: 4rem;
+    position: absolute;
+    bottom: 89%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+    width: 4.5rem;
+    border: .2rem solid rgb(8, 127, 156);
+    border-radius: 50%;
+    background: black;
+    transition: .3s ease;
+}
+
+.back-to-top a img {
+    display: block;
 }
 
 .social-links a img {
@@ -462,7 +443,7 @@ footer hr {
     border-top: 2px solid grey;
 }
 
-footer .container p span {
+footer p span {
     color: #5ab6e0;
 }
 
@@ -523,7 +504,7 @@ footer .container p span {
         bottom: 0;
         z-index: -1;
         transition: all .3s cubic-bezier(.19,1,.22,1);
-        background-image: linear-gradient(135deg, #5ab6e0 0%, #add6e2 100%);
+        background-image: linear-gradient(135deg,#1480b3 0%, #54d7ee  100%);
     }
     
     .hover-btn:hover {
@@ -604,4 +585,14 @@ footer .container p span {
     .project-photo {
         margin: 0 0 0 5rem;
     }    
+
+    /*FOOTER SECTION*/
+
+    .back-to-top:hover {
+        transform: scale(1.3);        
+    }
+
+    .back-to-top:hover img {
+        transform: scale(1.1);  
+    }
 }  
