@@ -424,6 +424,8 @@ footer {
 
 .back-to-top a img {
     display: block;
+    height: 100%;
+    width: 100%
 }
 
 .social-links a img {
