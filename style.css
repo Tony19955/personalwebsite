@@ -294,7 +294,7 @@ section {
 
 .contact {
     grid-area: contact;
-    background-image: url("../images/code.png");
+    background-image: url("images/code.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
