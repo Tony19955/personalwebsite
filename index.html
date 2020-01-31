@@ -11,8 +11,8 @@
     <body>
      
         <section class="home" id="home">                   
-            <h1>Hi, my name is <span class="title-color">Matej Mik</span>
-            <br>I'm a Full-stack Web developer.</h1>
+            <h1>Hi, my name is <span class="title-color">Matej Mik</span>.</h1>
+            <br><h4>Full-stack Web developer</h4>
             <a class="hover-btn" href="#about">Know more</a>            
             <div class="stars"></div>
             <div class="twinkling"></div>        
@@ -21,7 +21,7 @@
         <section class="about" id="about">
             <div class="about-background">
                 <h2>About me</h2>  
-                <img src="images/profile.png" alt="Profile picture">
+                <img class="profile-img" src="images/profile.png" alt="Profile picture">
                 <div class="about-text">    
                     <p>Started as 12 years old with 2D graphics and was
                     contributing to <strong><a href="http://www.chmatakov.cz/">chmatakov.cz</a></strong> as a
@@ -35,17 +35,132 @@
                     every new piece of knowledge, analyzed the performance and
                     applied in real projects.
                     </p>
-                    <p>I work as passionate freelance 
+                    <p>I'm passionate
                     full-stack web developer using the latest code practices
-                    and developing my own e-commerce solution. 
+                    and still eager for new experience. 
                     </p>
                     &nbsp;
-                    <p><strong><em>"I learnt to love DRY rule, but even more KISS (Keep it stupid simple),
+                    <p><strong><em>"I love DRY and KISS rules,
                     that's why you can find my code clean, debugged and easy 
                     maintainable"</em></strong>
                     </p> 
                 </div>                                    
-                <a href="#resume"></a><button class="hover-btn-resume">View Resume</button></a>     
+                <a class="hover-btn-contact" href="#contact">View contact</a>   
+                <div class="resume-container">
+
+                    <div class="skills-container">
+                        <h3>Technical skills</h3>
+                        <table>
+                            <tr>
+                                <td><img src="images/css3_logo.svg" alt="CSS3"></td>
+                                <td><H4>CSS3</H4></td>
+                                <td>
+                                    <div class="skill-meter-container">
+                                        <span class="full-circle"></span><span class="full-circle"></span><span class="full-circle"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/html5_logo.svg" alt="HTML5"></td>
+                                <td><H4>HTML5</H4></td>
+                                <td>
+                                    <div class="skill-meter-container">
+                                        <span class="full-circle"></span><span class="full-circle"></span><span class="full-circle"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/js_logo.svg" alt="JavaScript"></td>
+                                <td><H4>JavaScript</H4></td>
+                                <td>
+                                    <div class="skill-meter-container">
+                                        <span class="full-circle"></span><span class="full-circle"></span><span class="empty-circle"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/react_logo.svg" alt="ReactJS"></td>
+                                <td><H4>ReactJS</H4></td>
+                                <td>
+                                <div class="skill-meter-container">
+                                    <span class="full-circle"></span><span class="full-circle"></span><span class="empty-circle"></span>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/redux_logo.svg" alt="Redux"></td>
+                                <td><H4>Redux</H4></td>
+                                <td>
+                                <div class="skill-meter-container">
+                                    <span class="full-circle"></span><span class="empty-circle"></span><span class="empty-circle"></span>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/nodejs_logo.svg" alt="NodeJS"></td>
+                                <td><H4>NodeJS</H4></td>
+                                <td>
+                                <div class="skill-meter-container">
+                                    <span class="full-circle"></span><span class="empty-circle"></span><span class="empty-circle"></span>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/postqresql_logo.svg" alt="PostgreSQL"></td>
+                                <td><H4>PostgreSQL</H4></td>
+                                <td>
+                                <div class="skill-meter-container">
+                                    <span class="full-circle"></span><span class="empty-circle"></span><span class="empty-circle"></span>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/git_logo.svg" alt="Git"></td>
+                                <td><H4>Git</H4></td>
+                                <td>
+                                <div class="skill-meter-container">
+                                    <span class="full-circle"></span><span class="full-circle"></span><span class="full-circle"></span>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/adobe_logo.svg" alt="Adobe illustrator"></td>
+                                <td><H4>Adobe illustrator</H4></td>
+                                <td>
+                                <div class="skill-meter-container">
+                                    <span class="full-circle"></span><span class="full-circle"></span><span class="empty-circle"></span>
+                                </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="experience-container">
+                        <h3>Experience</h3>
+                        <div class="job-title-container">
+                            <h4>Web developer, freelance</h4>
+                            <h4>Oct 2017 - present</h4>
+                        </div>
+                        <ul>
+                            <li>Frontend webdeveloping using CSS3, HTML5, Javascript ES5-ES10, ReactJS, Redux, Redux-Saga</li>
+                            <li>Backend webdeveloping using NodeJS, ExpressJS, PostgreSQL, Firebase</li>
+                            <li>Using CSS preprocessor SCSS/SASS and Bootstrap to reduce size of heavy CSS files</li>
+                            <li>Experience with developing SPA & PWA</li>
+                            <li>Connecting projects with Google, Stripe and other APIs</li>
+                            <li>Experience with deploying projects on Heroku</li>
+                            <li>Building e-commerce solutions, personal websites, custom apps</li>
+                            <li>Building and editing projects on CMS platforms WordPress & MySquareSpace</li>
+                        </ul>
+                        <h3>Education</h3>
+                        <div class="job-title-container">
+                            <h4>Aircraft maintenance technician, 
+                            <br>Secondary school aviation-technical Trencin
+                            </h4>
+                            <h4>Oct 2011 - 2015</h4>
+                        </div>                      
+                    </div>
+
+                </div>  
             </div>   
         </section>
       
@@ -143,7 +258,7 @@
 
         </section>
 
-        <section class="contact">   
+        <section class="contact" id="contact">   
             <div class="contact-background">                
                 <div class="contact-container">       
                     <h2>Contact</h2>
