@@ -23,16 +23,23 @@ a, a:link, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-h1, h2, h3, h4 p {
+h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;  
-  z-index: 99; 
+  z-index: 10; 
   font-weight: 700; 
 }
 
 p {
   font-size: 1.4rem;
   line-height: 1.5;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 h2 {
@@ -81,18 +88,11 @@ section {
   justify-content: center;
 }
 
-.home h1 { 
-  font-size: 2.8rem;
-  line-height: 1.5;
-  text-align: left;
-}
-
 .home h4 {
   border-top: .2rem solid white;
   padding-top: 1rem;
-  margin: 3rem 0 10rem 0;
-  align-self: flex-start;
-  z-index: 10;
+  margin: 3rem 0 10rem 0;  
+  align-self: center;         
 }
 
 .home .hover-btn {
@@ -104,6 +104,7 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 
 .hover-btn {
@@ -186,27 +187,26 @@ section {
   "p"
   "btn"
   "sc"
-  "ec"
-  "eic"
+  "eei"
   /1fr;
   justify-items: center;
   background-color: #5ab6e0;
   background-image: linear-gradient(135deg,#5ab6e0,rgba(40, 121, 146, 0.877), #add6e2);
   color: #fff;  
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   position: relative;
-  padding: 2rem 2rem 10rem 2rem;
+  padding: 4rem 2rem 15rem 2rem;
 }
 
 .about-background:after {
-  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
   background: white;
   content: '';
   position: absolute;
   left: 0;
-  top: 89.5%;
+  top: 94.75%;
   right: 0;
   height: 100%;
   display: block;
@@ -214,7 +214,14 @@ section {
 
 .about h2 {
   grid-area: h2;
-  margin: 1rem 0 5rem;
+  margin: 0 0 7rem;
+}
+
+.about h3 {
+  align-self: flex-start;
+  margin: 4rem 0;
+  padding-bottom: 1rem;
+  border-bottom: .25rem solid white;
 }
 
 .profile-img {
@@ -249,26 +256,11 @@ section {
   align-self: center;
 }
 
-.resume-container {
-  grid-area: ts;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 20rem;
-}
-
 .skills-container {
   grid-area: sc;
   display: flex;
-  flex-direction: column;  
-  align-items: flex-start;
-}
-
-.about h3 {
-  align-self: flex-start;
-  margin: 4rem 0;
-  padding-bottom: 1rem;
-  border-bottom: .25rem solid white;
+  flex-direction: column;    
+  width: 100%;
 }
 
 .skill-meter-container {
@@ -293,30 +285,36 @@ section {
   border-radius: 50%;
 }
 
-.experience-container {
-  grid-area: ec;
+.exp-edu-int-container {
+  grid-area: eei;
   display: flex;
   flex-direction: column;
 }
 
-.education-and-interests-container {
-  grid-area: eic;
+.experience-container {  
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
+}
+
+.education-container {  
+  display: flex;
+  flex-direction: column;  
+  justify-self: flex-start;
+}
+
+.interests-container {  
+  display: flex;
+  flex-direction: column;  
+  justify-self: flex-start;
 }
 
 .job-title-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .job-title-container h4:nth-last-child(1) {
   margin-top: 1rem;
-}
-
-table {
-  width: 100%;
 }
 
 td {
@@ -360,7 +358,7 @@ li {
 
 .projects h2 {
   grid-area: h2;
-  margin: 0 0 4.5rem;
+  margin: 0 0 7rem;
   text-transform: uppercase;
   justify-self: center;
   color: #5ab6e0;    
@@ -415,6 +413,7 @@ li {
 }
 
 .project-photo {    
+  align-self: flex-start;
   margin-top: 3rem;    
 }
 
@@ -487,10 +486,6 @@ li {
   border: .2rem solid rgb(102, 199, 255);
   box-shadow: 0 1rem 2rem rgba(59, 232, 255, 0.5);
   transition: .3s;
-}
-
-.box h3 {
-  font-size: 2.8rem;
 }
 
 .box p {
@@ -614,32 +609,34 @@ footer p span {
 
 
 /* RESPONSIVE DESIGN */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-  section {
-    padding: 4rem;
-  }
-}
   
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {   
 
-  .about {
+  section {
+    padding: 2rem;
+  }
+
+  .about-background {    
     grid-template: 
-    "h2 h2 h2"
-    "img . p"
-    ". . btn"
-    /1fr 2rem 1fr;
+    ". h2 h2 h2 ."
+    ". img img img ."
+    "p p p p p"  
+    "sc sc . eei eei"
+    /2fr 2fr 1fr 2fr 2fr;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    padding: 4rem 2rem 20rem 2rem;
   }
 
-  .about-text {
-    margin-top: 0;
+  .about-background:after {
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    top: 89.75%;
   }
 
-  .hover-btn-contact {
-    margin: 0 0 5rem 0;
+  .experience-container {
+    justify-self: end;
   }
 
   .projects {
@@ -655,10 +652,6 @@ footer p span {
 
   /*TOP SECTION*/
 
-  .home h4 {    
-    align-self: center;    
-  }
-
   .hover-btn:after {
     content: "";
     display: block;
@@ -668,7 +661,7 @@ footer p span {
     left: 0;
     bottom: 0;
     z-index: -1;
-    transition: all .3s cubic-bezier(.19,1,.22,1);
+    transition: all .5s cubic-bezier(.19,1,.22,1);
     background-image: linear-gradient(135deg,#0b517257 0%, #4db9eb77  100%);
   }
   
@@ -685,11 +678,15 @@ footer p span {
   .about-background {
     grid-template: 
     ". h2 h2 h2 ."
-    ". img p p ."
-    ". . btn . ."
-    "s s s s s"
-    ". sc ec eic ."
-    /1fr 2fr 2fr 2fr 1fr;
+    ". img . p ."
+    ". s s s ."  
+    ". sc . eei ."   
+    /1fr 3fr 5rem 3fr 1fr;
+    padding: 4rem 2rem 15rem 2rem;
+  }
+
+  .about-text {
+    margin: 0;
   }
 
   .space {
@@ -698,7 +695,7 @@ footer p span {
   }
 
   .profile-img {
-    justify-self: start;
+    justify-self: center;
   }
 
   .hover-btn-contact {    
@@ -721,7 +718,7 @@ footer p span {
     display: block;
     position: absolute;
     background: rgba(255, 255, 255, 0.8);
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   .hover-btn-contact:hover:before {
@@ -729,20 +726,12 @@ footer p span {
   }
 
   .skills-container {    
-    justify-self: start;  
+    justify-self: end;  
   }
 
   .experience-container {   
-    justify-self: end;
+    justify-self: start;
     margin-top: 0;
-  }
-
-  .education-and-interests-container {    
-    justify-self: end;
-  }
-
-  .job-title-container {    
-    flex-direction: row;    
   }
 
   .job-title-container h4:nth-last-child(1) {
@@ -755,7 +744,7 @@ footer p span {
     grid-template: 
     ". h2 ."
     ". pc ."
-    /2fr 8fr 2fr;
+    /1fr 8fr 1fr;
   }
 
   .project-container {
@@ -781,7 +770,7 @@ footer p span {
   }
 
   .project-photo {
-    margin: 0 0 0 10rem;
+    margin: 0 0 0 5rem;
   }    
 
   /*FOOTER SECTION*/
@@ -794,3 +783,23 @@ footer p span {
     transform: scale(1.1);  
   }
 }  
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  .about-background {
+    grid-template: 
+    ". h2 h2 ."
+    ". img p ."
+    ". s s ."  
+    ". sc eei ."
+    /1fr 2fr 2fr 1fr;
+  }
+
+  .projects {
+    grid-template: 
+    ". h2 ."
+    ". pc ."
+    /1fr 4fr 1fr;
+  }
+}
