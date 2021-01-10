@@ -263,28 +263,6 @@ section {
   width: 100%;
 }
 
-.skill-meter-container {
-  display: flex;
-  margin-left: 3rem;
-}
-
-.full-circle {
-  margin: 0 .5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  background: white;
-  border: .25rem solid white;
-  border-radius: 50%;
-}
-
-.empty-circle {
-  margin: 0 .5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  border: .25rem solid white;
-  border-radius: 50%;
-}
-
 .exp-edu-int-container {
   grid-area: eei;
   display: flex;
